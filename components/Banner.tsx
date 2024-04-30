@@ -30,11 +30,11 @@ const Banner = () => {
         transition={{ duration: 0.5, delay: 0.8 }}
         className="text-base md:max-w-[650px] text-textDark font-medium"
       >
-        I am a web developer with 1 years of experience in React and Next. I
+        I am a web developer with 1 year of experience in React and Next. I
         have a strong foundation in front-end development and am skilled in
         creating user-friendly and responsive web applications using React and
         Next.
-        {/* <a href="https://www.noormohammad.live/" target="_blank">
+        {/* <a href="" target="_blank">
           {" "}
           <span className="text-textGreen inline-flex relative cursor-pointer h-7 overflow-x-hidden group">
             Learn more

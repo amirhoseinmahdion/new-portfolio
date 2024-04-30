@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import { logo } from "@/public/assets";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
@@ -100,20 +99,6 @@ const Navbar = () => {
                 Project
               </motion.li>
             </Link>
-            {/* <Link
-              className="flex items-center gap-1 font-medium text-textDark hover:text-textGreen cursor-pointer duration-300 nav-link"
-              href="#contact"
-              onClick={handleScroll}
-            >
-              <motion.li
-                initial={{ y: -10, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.1, delay: 0.4 }}
-              >
-                <span className="text-textGreen">04.</span>
-                Contact
-              </motion.li>
-            </Link> */}
           </ul>
         </div>
         <Link href="/assets/mahdion cv.pdf" target="_blank">
@@ -126,7 +111,6 @@ const Navbar = () => {
             Resume
           </motion.button>
         </Link>
-        {/* ============== Small Icon Start here =========== */}
         <div
           onClick={() => setShow(true)}
           className="w-6 h-5 flex flex-col justify-between items-center mdl:hidden text-4xl text-textGreen cursor-pointer overflow-hidden group"
@@ -250,7 +234,7 @@ const Navbar = () => {
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.85, ease: "easeIn" }}
-                    href="https://www.youtube.com/channel/UChkOsij0dhgft0GhHRauOAA"
+                    href=""
                     target="_blank"
                   >
                     <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
@@ -272,7 +256,7 @@ const Navbar = () => {
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.95, ease: "easeIn" }}
-                    href="https://www.facebook.com/Noorlalu143/"
+                    href=""
                     target="_blank"
                   >
                     <span className="w-10 h-10 text-xl bg-bodyColor border-[1px] border-zinc-700 hover:border-textGreen text-zinc-200 rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">
@@ -298,16 +282,12 @@ const Navbar = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 1.2, ease: "easeIn" }}
                 className="text-sm w-72 tracking-widest text-textGreen text-center mt-4"
-                href="mahdionamirhosein@gmail.com"
               >
                 <p>mahdionamirhosein@gmail.com</p>
               </motion.a>
             </motion.div>
           </div>
         )}
-        {/* ============== Small Icon End here ============= */}
-
-        {/* ============ ListItem End here ========== */}
       </div>
     </div>
   );
