@@ -47,6 +47,18 @@ body::before {
     radial-gradient(circle at 90% 35%, rgb(56 189 248 / 0.08), transparent 26rem);
 }
 
+@keyframes reveal-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal-up { animation: reveal-up 600ms both cubic-bezier(0.22, 1, 0.36, 1); }
+.reveal-delay-1 { animation-delay: 80ms; }
+.reveal-delay-2 { animation-delay: 160ms; }
+.reveal-delay-3 { animation-delay: 240ms; }
+.reveal-delay-4 { animation-delay: 320ms; }
+.reveal-delay-5 { animation-delay: 400ms; }
+
 @layer components {
   .section-shell {
     @apply mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-12;
@@ -54,6 +66,8 @@ body::before {
 
   .section-spacing {
     @apply py-20 sm:py-28;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 900px;
   }
 
   .surface-card {
