@@ -1,104 +1,40 @@
-import { profileMe } from "../public/assets";
 import Image from "next/image";
+import { profileMe } from "../public/assets";
 import SectionTitle from "./SectionTitle";
-import { AiFillThunderbolt } from "react-icons/ai";
 
-const About = () => {
-  return (
-    <section
-      id="about"
-      className="max-w-containerSmall mx-auto py-10 lgl:py-32 flex flex-col gap-8"
-    >
-      <SectionTitle title="About Me" titleNo="01" />
-      <div className="flex flex-col lgl:flex-row gap-16">
-        <div className="w-full lgl:w-2/3 text-base text-textDark font-medium flex flex-col gap-4">
-          <p>
-            Hello, my name is AmirHossein Mahdion. I am a front-end programmer
-            and I am very interested in designing dynamic and attractive
-            websites. I started this work at the age of 20, when the Corona
-            virus had reached its peak. I have a master's degree in computer
-            science and I have knowledge in my field of artificial intelligence
-          </p>
-          <p>
-            <span className="text-textGreen">
-              a student of artificial intelligence in Azad University
-            </span>
-            &ensp;and I am interested in using artificial intelligence in programming
-            and I am currently
-            <span className="text-textGreen">
-            &ensp;I am working in CosntERP company
-            </span>
-            , which is currently trying to produce an ERP software.
-          </p>
+const skillGroups = [
+  { title: "Core", skills: ["JavaScript", "TypeScript", "React.js", "Next.js", "HTML & CSS"] },
+  { title: "State & UI", skills: ["Redux Toolkit", "React Query", "Tailwind CSS", "Material UI", "SASS"] },
+  { title: "Back end & tools", skills: ["Node.js", "NestJS", "PostgreSQL", "Prisma", "Docker", "WebSocket", "Git"] },
+];
 
-          <p>Here are a few technologies I have been working with recently:</p>
-          <ul className="max-w-[450px] text-sm font-titleFont grid grid-cols-2 gap-2 mt-6">
-            <li className="flex items-center gap-2">
-              <span className="text-textGreen">
-                <AiFillThunderbolt />
-              </span>
-              JavaScript (ES6+)
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-textGreen">
-                <AiFillThunderbolt />
-              </span>
-              Next.js
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-textGreen">
-                <AiFillThunderbolt />
-              </span>
-              React
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-textGreen">
-                <AiFillThunderbolt />
-              </span>
-              Git/Github
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-textGreen">
-                <AiFillThunderbolt />
-              </span>
-              TypeScript
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-textGreen">
-                <AiFillThunderbolt />
-              </span>
-              REST api
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-textGreen">
-                <AiFillThunderbolt />
-              </span>
-              MongoDB
-            </li>
-            <li className="flex items-center gap-2">
-              <span className="text-textGreen">
-                <AiFillThunderbolt />
-              </span>
-              Tailwindcss
-            </li>
-          </ul>
+const About = () => (
+  <section id="about" className="section-shell section-spacing">
+    <SectionTitle eyebrow="About me" title="Engineering thoughtful digital experiences." description="I combine strong front-end fundamentals with practical back-end knowledge to ship complete, dependable products." />
+    <div className="grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
+      <div className="relative mx-auto w-full max-w-sm">
+        <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-textGreen/30 to-sky-400/10 blur-xl" />
+        <Image src={profileMe} alt="Amirhosein Mahdion" className="relative aspect-[4/5] w-full rounded-3xl object-cover object-center grayscale transition duration-500 hover:grayscale-0" sizes="(max-width: 1024px) 384px, 32vw" priority />
+      </div>
+      <div>
+        <p className="text-lg leading-8 text-textDark">I&apos;m a front-end developer based in Tehran with three years of experience building business software, education platforms, and real-time internal tools. My work focuses on turning complex workflows into clear interfaces that teams can use confidently.</p>
+        <p className="mt-5 text-lg leading-8 text-textDark">I care about reusable architecture, responsive design, clean code, and measurable improvements. I also use AI-assisted development, prompt engineering, and context engineering to explore solutions and move faster without compromising quality.</p>
+        <div className="mt-7 rounded-2xl border border-textGreen/20 bg-textGreen/5 p-5">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-textGreen">Education</p>
+          <p className="mt-2 font-titleFont font-semibold text-heading">Master&apos;s in Computer Engineering</p>
+          <p className="mt-1 text-sm text-textDark">Artificial Intelligence specialization</p>
         </div>
-        <div className="w-full lgl:w-1/3 h-80 relative group">
-          <div className="absolute w-full h-80 -left-6 -top-6 rounded-lg ">
-            <div className="w-full h-full relative z-20 flex pl-6 lgl:pl-0">
-              <Image
-                className="rounded-lg h-full object-cover"
-                src={profileMe}
-                alt="profileMe"
-              />
-              <div className="hidden lgl:inline-block absolute w-full h-80 bg-textGreen/20 rounded-md top-0 left-0 group-hover:bg-transparent duration-300"></div>
+        <div className="mt-9 grid gap-4 sm:grid-cols-3">
+          {skillGroups.map((group) => (
+            <div key={group.title} className="surface-card p-5">
+              <h3 className="mb-4 font-titleFont font-semibold text-heading">{group.title}</h3>
+              <ul className="space-y-2 text-sm text-textDark">{group.skills.map((skill) => <li key={skill} className="flex gap-2"><span className="text-textGreen">›</span>{skill}</li>)}</ul>
             </div>
-          </div>
-          <div className="hidden lgl:inline-flex w-full h-80 border-2 border-textGreen rounded-md group-hover:-translate-x-2 group-hover:-translate-y-2 transition-transform duration-300"></div>
+          ))}
         </div>
       </div>
-    </section>
-  );
-};
+    </div>
+  </section>
+);
 
 export default About;

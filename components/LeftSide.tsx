@@ -24,7 +24,7 @@ const LeftSide = () => {
           </span>
         </a> */}
         <a
-          href="https://www.linkedin.com/in/amirhosein-mahdion-aa058b2a2/"
+          href="https://www.linkedin.com/in/amirhosein-mahdion/"
           target="_blank"
         >
           <span className="w-10 h-10 text-xl bg-hoverColor rounded-full inline-flex items-center justify-center hover:text-textGreen cursor-pointer hover:-translate-y-2 transition-all duration-300">

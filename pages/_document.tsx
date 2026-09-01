@@ -1,8 +1,18 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
+const themeScript = `
+  (function () {
+    try {
+      var savedTheme = localStorage.getItem("theme");
+      var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.classList.toggle("dark", savedTheme ? savedTheme === "dark" : prefersDark);
+    } catch (_) {}
+  })();
+`;
+
 export default function Document() {
   return (
-    <Html lang="en">
+    <Html lang="en" suppressHydrationWarning>
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -12,6 +22,7 @@ export default function Document() {
         ></link>
       </Head>
       <body>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
         <Main />
         <NextScript />
       </body>

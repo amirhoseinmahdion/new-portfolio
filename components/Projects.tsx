@@ -1,187 +1,33 @@
-import { car, food, realstate } from "@/public/assets";
-import Image from "next/image";
-import { AiOutlineYoutube } from "react-icons/ai";
+import { HiArrowUpRight } from "react-icons/hi2";
 import { TbBrandGithub } from "react-icons/tb";
 import SectionTitle from "./SectionTitle";
-import { RxOpenInNewWindow } from "react-icons/rx";
 
-const Projects = () => {
-  return (
-    <section id="project" className="max-w-container mx-auto lgl:px-20 py-24">
-      <SectionTitle title="Some Things I have Built" titleNo="03" />
-      <div className="w-full flex flex-col items-center justify-center gap-28 mt-10">
-        <div className="flex flex-col xl:flex-row gap-6">
-          <a
-            className="w-full xl:w-1/2 h-auto relative group"
-            href="https://github.com/amirhoseinmahdion/real-state-main"
-            target="_blank"
-          >
-            <div>
-              <Image
-                className="w-full h-full object-contain"
-                src={realstate}
-                alt="realstate"
-              />
-              <div className="absolute w-full h-full bg-textGreen/10 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
-            </div>
-          </a>
-          <div className="w-full xl:w-1/2 flex flex-col gap-6 lgl:justify-between items-end text-right xl:-ml-16 z-10">
-            <div>
-              <p className="font-titleFont text-textGreen text-sm tracking-wide">
-                Featured Project
-              </p>
-              <h3 className="text-2xl font-bold">Real State</h3>
-            </div>
-            <p className="bg-[#112240] text-sm md:text-base p-2 md:p-6 rounded-md">
-              A project that anyone can register and sell their properties and
-              anyone can buy from. This website can help all people to buy a
-              building or villa.
-            </p>
-            <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
-              <li>Nextjs</li>
-              <li>MongoDB</li>
-              <li>Next-auth</li>
-            </ul>
-            <div className="text-2xl flex gap-4">
-              <a
-                className="hover:text-textGreen duration-300"
-                href="https://github.com/amirhoseinmahdion/real-state-main"
-                target="_blank"
-              >
-                <TbBrandGithub />
-              </a>
-              {/* <a
-                className="hover:text-textGreen duration-300"
-                href=""
-                target="_blank"
-              >
-                <AiOutlineYoutube />
-              </a> */}
-              {/* <a
-                className="hover:text-textGreen duration-300"
-                href=""
-                target="_blank"
-              >
-                <RxOpenInNewWindow />
-              </a> */}
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col xl:flex-row-reverse gap-6">
-          <a
-            className="w-full xl:w-1/2 h-auto relative group"
-            href="https://github.com/amirhoseinmahdion/foodnextjs"
-            target="_blank"
-          >
-            <div>
-              <Image
-                className="w-full h-full object-contain"
-                src={food}
-                alt="food"
-              />
-              <div className="absolute w-full h-full bg-textGreen/10 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
-            </div>
-          </a>
-          <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right z-10">
-            <div>
-              <p className="font-titleFont text-textGreen text-sm tracking-wide">
-                Featured Project
-              </p>
-              <h3 className="text-2xl font-bold">Food Project</h3>
-            </div>
-            <p className="text-sm md:text-base bg-[#112240] p-2 md:p-6 rounded-md xl:-mr-16">
-              A project similar to Snap Food for ordering food along with
-              various filters such as degree of difficulty, price and cooking
-              time
-            </p>
-            <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
-              <li>Nextjs</li>
-              <li>Css Module</li>
-              <li>React Hook Form</li>
-            </ul>
-            <div className="text-2xl flex gap-4">
-              <a
-                className="hover:text-textGreen duration-300"
-                href="https://github.com/amirhoseinmahdion/foodnextjs"
-                target="_blank"
-              >
-                <TbBrandGithub />
-              </a>
-              {/* <a
-                className="hover:text-textGreen duration-300"
-                href=""
-                target="_blank"
-              >
-                <AiOutlineYoutube />
-              </a> */}
-              {/* <a
-                className="hover:text-textGreen duration-300"
-                href=""
-                target="_blank"
-              >
-                <RxOpenInNewWindow />
-              </a> */}
-            </div>
-          </div>
-        </div>
-        <div className="flex flex-col xl:flex-row gap-6">
-          <a
-            className="w-full xl:w-1/2 h-auto relative group"
-            href="https://github.com/amirhoseinmahdion/carproject"
-            target="_blank"
-          >
-            <div>
-              <Image
-                className="w-full h-full object-contain"
-                src={car}
-                alt="car"
-              />
-              <div className="absolute w-full h-full bg-textGreen/10 rounded-lg top-0 left-0 group-hover:bg-transparent duration-300"></div>
-            </div>
-          </a>
-          <div className="w-full xl:w-1/2 flex flex-col gap-6 justify-between items-end text-right xl:-ml-16 z-10">
-            <div>
-              <p className="font-titleFont text-textGreen text-sm tracking-wide">
-                Featured Project
-              </p>
-              <h3 className="text-2xl font-bold">Car Project</h3>
-            </div>
-            <p className="text-sm md:text-base bg-[#112240] p-2 md:p-6 rounded-md">
-              A website where you can advertise and sell your car and even sell
-              your car.
-            </p>
-            <ul className="text-xs md:text-sm font-titleFont tracking-wide flex gap-2 md:gap-5 justify-between text-textDark">
-              <li>Nextjs</li>
-              <li>SSG and SSR</li>
-            </ul>
-            <div className="text-2xl flex gap-4">
-              <a
-                className="hover:text-textGreen duration-300"
-                href="https://github.com/amirhoseinmahdion/carproject"
-                target="_blank"
-              >
-                <TbBrandGithub />
-              </a>
-              {/* <a
-                className="hover:text-textGreen duration-300"
-                href=""
-                target="_blank"
-              >
-                <AiOutlineYoutube />
-              </a> */}
-              {/* <a
-                className="hover:text-textGreen duration-300"
-                href=""
-                target="_blank"
-              >
-                <RxOpenInNewWindow />
-              </a> */}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+const projects = [
+  { name: "Barbershop", type: "Booking platform", description: "A full-stack appointment and business management experience built with a modern Next.js architecture.", stack: ["Next.js App Router", "Express", "TypeScript", "PostgreSQL", "Tailwind"] },
+  { name: "OnlineChat", type: "Real-time application", description: "A responsive chat product with live messaging and persistent conversations powered by Socket.IO.", stack: ["Next.js", "Socket.IO", "Express", "TypeScript", "PostgreSQL"] },
+  { name: "Sunglasses", type: "Commerce experience", description: "A full-stack storefront with type-safe data access and a clean, conversion-focused shopping flow.", stack: ["Next.js", "Express", "Prisma", "TypeScript", "PostgreSQL"] },
+  { name: "ConstERP", type: "Enterprise software", description: "Feature-rich ERP modules for teams managing operations, finance, people, and internal workflows.", stack: ["Next.js", "TypeScript", "MUI", "Formik", "React Query"] },
+  { name: "Fitness App", type: "Health & fitness", description: "A responsive application for exploring and tracking fitness experiences across devices.", stack: ["Next.js", "Axios", "Cookies", "Tailwind"] },
+  { name: "Divar Project", type: "Marketplace", description: "A classifieds-style interface with API-driven listings, authentication flows, and server-state caching.", stack: ["React", "Swagger", "Axios", "React Query"] },
+  { name: "Peyvand", type: "Product platform", description: "A responsive React product with data-rich interfaces and reusable design components.", stack: ["React", "PostgreSQL", "Tailwind", "Material UI"] },
+  { name: "Hamshagerdi", type: "Community platform", description: "An accessible, responsive interface designed around discovery and community interaction.", stack: ["React", "PostgreSQL", "Tailwind", "Material UI"] },
+];
+
+const Projects = () => (
+  <section id="project" className="section-shell section-spacing">
+    <SectionTitle eyebrow="Selected work" title="Products built to solve real problems." description="A selection of full-stack, real-time, enterprise, and consumer projects. Visit GitHub to explore the available source code." />
+    <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project, index) => (
+        <article key={project.name} className={`surface-card group flex min-h-[320px] flex-col p-6 transition duration-300 hover:-translate-y-1 hover:border-textGreen/30 ${index === 0 || index === 3 ? "lg:col-span-2" : ""}`}>
+          <div className="flex items-center justify-between"><span className="text-xs font-semibold uppercase tracking-[0.18em] text-textGreen">{project.type}</span><HiArrowUpRight className="text-xl text-textDark transition group-hover:text-textGreen" /></div>
+          <h3 className="mt-8 font-titleFont text-2xl font-bold text-heading">{project.name}</h3>
+          <p className="mt-4 flex-1 leading-7 text-textDark">{project.description}</p>
+          <ul className="mt-7 flex flex-wrap gap-2">{project.stack.map((item) => <li key={item} className="rounded-full border border-line/60 bg-bodyColor/40 px-3 py-1 text-xs text-textDark">{item}</li>)}</ul>
+        </article>
+      ))}
+    </div>
+    <a href="https://github.com/amirhoseinmahdion" target="_blank" rel="noreferrer" className="secondary-button mx-auto mt-10 w-fit">View GitHub profile <TbBrandGithub /></a>
+  </section>
+);
 
 export default Projects;

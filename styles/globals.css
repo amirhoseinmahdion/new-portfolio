@@ -2,15 +2,78 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  color-scheme: light;
+  --color-background: 246 248 252;
+  --color-surface: 255 255 255;
+  --color-heading: 15 23 42;
+  --color-foreground: 30 41 59;
+  --color-muted: 83 98 119;
+  --color-accent: 5 150 105;
+  --color-line: 203 213 225;
+}
+
+html.dark {
+  color-scheme: dark;
+  --color-background: 8 15 30;
+  --color-surface: 16 27 47;
+  --color-heading: 248 250 252;
+  --color-foreground: 226 232 240;
+  --color-muted: 148 163 184;
+  --color-accent: 100 255 180;
+  --color-line: 51 65 85;
+}
+
+body {
+  background: rgb(var(--color-background));
+  transition: background-color 250ms ease, color 250ms ease;
+}
+
+::selection {
+  color: rgb(var(--color-background));
+  background: rgb(var(--color-accent));
+}
+
+body::before {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at 12% 5%, rgb(var(--color-accent) / 0.1), transparent 28rem),
+    radial-gradient(circle at 90% 35%, rgb(56 189 248 / 0.08), transparent 26rem);
+}
+
 @layer components {
-  .contactInput {
-    @apply w-full text-base text-white placeholder:text-textLight border border-b-[1px] border-transparent border-b-textGreen py-3 px-2 outline-none focus-within:border-[1px] focus-within:border-textGreen duration-100 bg-zinc-800;
+  .section-shell {
+    @apply mx-auto w-full max-w-[1180px] px-5 sm:px-8 lg:px-12;
   }
+
+  .section-spacing {
+    @apply py-20 sm:py-28;
+  }
+
+  .surface-card {
+    @apply rounded-2xl border border-line/60 bg-surface/75 shadow-[0_20px_70px_rgba(15,23,42,0.08)] backdrop-blur-sm;
+  }
+
+  .primary-button {
+    @apply inline-flex items-center gap-2 rounded-xl bg-textGreen px-5 py-3 font-semibold text-bodyColor transition hover:-translate-y-0.5 hover:bg-[#8affc9] focus:outline-none focus:ring-2 focus:ring-textGreen focus:ring-offset-2 focus:ring-offset-bodyColor;
+  }
+
+  .secondary-button {
+    @apply inline-flex items-center gap-2 rounded-xl border border-line/70 bg-surface/50 px-5 py-3 font-semibold text-textLight transition hover:-translate-y-0.5 hover:border-textGreen/50 hover:bg-textGreen/5 focus:outline-none focus:ring-2 focus:ring-textGreen focus:ring-offset-2 focus:ring-offset-bodyColor;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
 }
 
 .scrollbarHide::-webkit-scrollbar {
   display: none;
-}
-.active {
-  color: #ffbf00;
 }
